@@ -7,8 +7,12 @@ public class Greetings {
         if (name == null) {
             return "Witaj, mój przyjacielu";
         } else {
-            return "Witaj, " + name + "!";
-        }
+            if (name.toUpperCase().equals(name)) {
+                return "WITAJ, " + name + "!";
+            } else {
+                return "Witaj, " + name + "!";
+            }
 
+        }
     }
 }
