@@ -39,4 +39,14 @@ public class GreetingsTest {
 
         assertEquals("WITAJ, ADAM!", result);
     }
+
+    @Test
+    public void shouldReturnGreetingsForMultipleNames() {
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza";
+
+        String result = greetings.greet(name);
+
+        assertEquals("Adam i Iza, witajcie!", result);
+    }
 }
