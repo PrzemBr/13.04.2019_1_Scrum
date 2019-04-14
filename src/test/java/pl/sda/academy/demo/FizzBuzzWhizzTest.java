@@ -1,3 +1,4 @@
+/*
 package pl.sda.academy.demo;
 
 import org.junit.Test;
@@ -46,3 +47,4 @@ public class FizzBuzzWhizzTest {
 
     }
 }
+*/

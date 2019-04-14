@@ -83,6 +83,6 @@ public class GreetingsTest {
         String result = greetings.greet(name);
 
         //then
-        assertEquals("Z liczbami się nie witam.", name);
+        assertEquals("Z liczbami się nie witam.", result);
     }
 }
