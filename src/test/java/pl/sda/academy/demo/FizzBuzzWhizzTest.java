@@ -1,4 +1,3 @@
-
 package pl.sda.academy.demo;
 
 import org.junit.Test;
@@ -46,5 +45,6 @@ public class FizzBuzzWhizzTest {
         assertEquals("Whizz", returned1);
         assertEquals("FizzWhizz", returned2);
         assertEquals("BuzzWhizz", returned3);
+
     }
 }
