@@ -53,10 +53,23 @@ public class GreetingsTest {
     @Test
     public void shouldReturnGreetingsForMultipleNames() {
         Greetings greetings = new Greetings();
-        String name = "„Adam,Iza,Robert";
+        String name = "Adam,Iza,Robert";
 
         String result = greetings.greet(name);
 
         assertEquals("Adam, Iza i Robert, witajcie!", result);
+    }
+
+    @Test
+    public void shouldReturnUpperCaseGreetingsForUppercaseName(){
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza,ROBERT";
+
+        //when
+        String result = greetings.greet(name);
+
+        //then
+        assertEquals("Adam i Iza, witajcie! WITAJ ROBERT!", result);
     }
 }
