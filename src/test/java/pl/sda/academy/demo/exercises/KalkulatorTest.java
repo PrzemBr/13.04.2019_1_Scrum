@@ -47,4 +47,49 @@ public class KalkulatorTest {
 
         assertEquals(result, 15);
     }
+
+    @Test
+    public void shouldSupportNegativeNumbers() {
+        String test = "3,-5";
+
+        int result = Kalkulator.licz(test);
+
+        assertEquals(result, "Liczby ujemne nie są obsługiwane");
+    }
+
+    @Test
+    public void shouldIgnoreNumbersGreaterThanThousand() {
+        String test = "„1002,5";
+
+        int result = Kalkulator.licz(test);
+
+        assertEquals(result, 7);
+    }
+
+    @Test
+    public void shouldAcceptSeparatorsInAnySize() {
+        String test = "//[***]\\n5***2***3";
+
+        int result = Kalkulator.licz(test);
+
+        assertEquals(result, 10);
+    }
+
+    @Test
+    public void shouldAcceptDifferentSeparators() {
+        String test = "//[*][%]\\ n3*5%6";
+
+        int result = Kalkulator.licz(test);
+
+        assertEquals(result, 14);
+    }
+
+    @Test
+    public void shouldAcceptMultipleSeparatorsLongerThanChar() {
+        String test = "//[**][%]\\n5**3%7";
+
+        int result = Kalkulator.licz(test);
+
+        assertEquals(result, 15);
+    }
 }
