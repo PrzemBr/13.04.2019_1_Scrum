@@ -72,4 +72,17 @@ public class GreetingsTest {
         //then
         assertEquals("Adam i Iza, witajcie! WITAJ ROBERT!", result);
     }
+
+    @Test
+    public void shouldNotGreetNumbers(){
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam1";
+
+        //when
+        String result = greetings.greet(name);
+
+        //then
+        assertEquals("Z liczbami się nie witam.", name);
+    }
 }
