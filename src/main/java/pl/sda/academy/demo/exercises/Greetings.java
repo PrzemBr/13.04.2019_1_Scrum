@@ -1,5 +1,9 @@
 package pl.sda.academy.demo.exercises;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Greetings {
 
     public String greet(String name) {
@@ -36,5 +40,13 @@ public class Greetings {
             return greeting;
         }
         return null;
+    }
+
+    private boolean checkIfUpperCase(String name) {
+        if (name.toUpperCase().equals(name)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
